@@ -1,0 +1,25 @@
+{
+    "name" : "CC HelpCenter",
+    "short_name": "CCHC",
+    "start_url" : "/index.html",
+    "display": "standalone",
+    "background_color": "white",
+    "orientation": "potrait",
+    "icons": [
+        {
+            "src": "/images/cc72x72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "/images/cc112x112.png",
+            "type": "image/png",
+            "sizes": "112x112"
+        },
+        {
+            "src": "/images/cc200x200.png",
+            "type": "image/png",
+            "sizes": "200x200"
+        }
+    ]
+}

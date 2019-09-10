@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.5/xlsx.full.min.js"></script>
+        
+        <!-- Compiled and minified CSS -->
+           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+           <!--Import materialize.css-->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+           <!--mediaquery-->
+           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+         <link href="https://fonts.googleapis.com/css?family=Gayathri|Roboto+Slab&display=swap" rel="stylesheet">
+         <link rel="stylesheet" type="text/css" href="app.css">
+         <link rel="manifest" href="manifest.json">
+         <!--for ios support for safari-->
+         <link rel="apple-touch-icon" href="images/cc72x72.png">
+         <link rel="apple-touch-icon" href="images/cc200x200.png">
+         <meta name="apple-mobile-web-app-status-bar" content="white">
+
+         
+              
+   <script>
+   
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+   
+   </script>    
+</head>
+    <body>
+        <nav>
+            <div class="nav-wrapper black">
+              <a href="#" class="brand-logo center">CC HelpCenter</a>
+            </div>
+          </nav>
+          <main>
+            <div class="section"></div>
+            <!-- rough written paras just to fillup the page functionality is in buttonss -->
+          <div class="container buttons">
+          <div><i>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</div>
+            <div class="section"></div>
+          <div class="center "><button class="btn-large black" id="next">Next</button></div>
+          <div class="center section"><button class="btn-large black" id="admin">Admin</button></div>
+          <div class="center"><i>admin password :admin123</i></div>
+          <div class="section"></div>
+          <div class="grey lighten-2"><i>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose.</div>
+            <div class="section"></div>
+        </div>
+        <!-- page2 -->
+          <div class="wrapper">
+          <div class="section"></div>
+          <!-- complain box -->
+          <div id="c_box" class="modal">
+            <div class="modal-content">
+              <form id="complain" action="#!" method="POST">
+                <div class="row">    
+                <div class="input-field col s12">
+                            <input  id="u_id" name='u_id' type="text" class="validate">
+                            <label for="u_id">User_id</label>
+                          </div>
+                        </div>         
+
+                    <div class="row">
+                            <div class="input-field col s12">
+                                    <textarea id="c_text" name='complain' class="materialize-textarea"></textarea>
+                                    <label for="c_text">COMPLAIN:</label>
+                                  </div>
+                    </div>
+             
+            </div>
+            <div class="modal-footer">
+              <input type="submit" id="submit" class="btn-flat">
+            </div>
+        </form>
+          </div>
+          <div id="news" class="modal">
+            <div class="modal-content">
+             <form id="announcement">
+               <div class="row">
+<div class="input-field col s12">
+<textarea id="text" class="materialize-textarea"></textarea>
+<label for="text">ANNOUNCEMENT:</label>
+</div>
+               </div>
+               <div class="modal-footer">
+<input type="submit" value="add" class="btn-flat pink lighten-3 modal-close an">
+               </div>
+             </form>
+            </div>
+
+          </div>
+
+<!--for users details modal-->
+<div id="u_detail" class="modal bottom-sheet">
+   <div class="modal-content" id="details">
+        
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="btn-flat msg">message</a>
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">close</a>
+  </div>
+</div>
+
+          <!-- announcement section -->
+          <div class="row">
+          <div id="infos" class="container">
+              Announcements<hr>
+             <div class="info">
+                
+               <p style="display: inline"><i class="material-icons">star</i> The net probably make some problem due to heavy rain</p>
+             
+              </div>
+          </div>
+          <div class="section"></div>
+         <div style="text-align: center" id="a_btn"> <a class="btn-floating  black waves-effect waves-light  modal-trigger" href="#news"><i class="material-icons">add</i></a></div>
+        </div>
+       
+          <!-- admin section -->
+          <div id="admin">
+              <div class="row">
+              <div id="complain_box" class="container">
+               <div>Complain<hr></div>
+               <div id="complains">
+
+               </div>
+               <div class="row">
+                <div class="section"></div>
+                <div style="text-align: center"> <a class="btn-floating  black waves-effect waves-light  modal-trigger" id='add_btn' href="#c_box"><i class="material-icons">add</i></a></div>
+               
+               </div>
+              </div>
+            </div>
+        
+          </div>
+          <div class="row">
+            <!-- about section -->
+            <div class="container">
+                About <hr>
+                <p>Provide you the fastest service.is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Speed depends on the package you choose</p>
+             <div class="col l4 m4 s12 card red">Package 1</div>
+             <div class="col l4 m4  s12 card blue">Package 2</div>
+             <div class="col l4  m4 s12 card green">Package 3</div>
+            </div>
+          </div>
+          <div class="row update">
+            <label class="btn black" for="add_user">update users</label>
+            <input type="file"  id="add_user" style="visibility: hidden" >
+            
+        </div>
+      </div>
+    </main>
+  <!-- footer of the page -->
+    <footer class="page-footer black">
+        
+        <div class="footer-copyright">
+          <div class="container">
+          © 2014 Copyright Text
+          </div>
+        </div>
+      </footer>
+          
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCxlWswvk7weMGaO0BIz-1eBhsUiobu9uw",
+    authDomain: "complain-box-2dd8d.firebaseapp.com",
+    databaseURL: "https://complain-box-2dd8d.firebaseio.com",
+    projectId: "complain-box-2dd8d",
+    storageBucket: "complain-box-2dd8d.appspot.com",
+    messagingSenderId: "285636806609",
+    appId: "1:285636806609:web:038332eb536279d9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+
+
+
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+          <script src="js/app.js"></script>
+          <script src="js/index.js"></script>
+        
+    </body>
+</html>
